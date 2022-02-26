@@ -1,0 +1,27 @@
+database:
+  url: jdbc:mysql://localhost:3306/workflow
+  username: ${WORKFLOW_DB_USERNAME}
+  password: ${WORKFLOW_DB_PASSWORD}
+
+settings:
+  batchSize: 100
+  timeZone: Asia/Ho_Chi_Minh
+  domain:
+    web: http://localhost
+    api: http://localhost:8080
+
+servlet:
+  multipart:
+    max-file-size: 5MB
+    max-request-size: 5MB
+
+cors:
+  allowOrigin:
+    - http://localhost:3000
+    - http://localhost:8081
+  maxAge: 3600
+
+jwt:
+  tokenKey: wfl_jwt
+  tokenSecret: db)*3#)sd)4e$#&!%f&(wj@530x7&8m$4yqg&3@m7dtrkfe=w
+  tokenExpirationSec: 864000
