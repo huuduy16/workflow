@@ -1,4 +1,4 @@
-package apis.foudation;
+package apis.foundation;
 
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
