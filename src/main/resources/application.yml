@@ -3,6 +3,18 @@ database:
   username: ${WORKFLOW_DB_USERNAME}
   password: ${WORKFLOW_DB_PASSWORD}
 
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/workflow
+    username: ${WORKFLOW_DB_USERNAME}
+    password: ${WORKFLOW_DB_PASSWORD}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+
 settings:
   batchSize: 100
   timeZone: Asia/Ho_Chi_Minh
