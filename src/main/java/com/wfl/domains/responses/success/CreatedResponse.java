@@ -8,4 +8,7 @@ public class CreatedResponse<T> extends ResponseEntity<T> {
     public CreatedResponse(T body) {
         super(body, HttpStatus.CREATED);
     }
+    public CreatedResponse() {
+        super(HttpStatus.CREATED);
+    }
 }

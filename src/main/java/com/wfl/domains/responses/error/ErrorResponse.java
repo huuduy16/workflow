@@ -1,7 +1,9 @@
 package com.wfl.domains.responses.error;
 
 import com.wfl.domains.responses.error.ErrorResponse.Payload;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NonNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

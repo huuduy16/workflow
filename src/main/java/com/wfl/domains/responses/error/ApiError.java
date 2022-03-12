@@ -1,12 +1,12 @@
 package com.wfl.domains.responses.error;
 
 import lombok.AllArgsConstructor;
-import lombok.NonNull;
+import lombok.Value;
 
+@Value
 @AllArgsConstructor
 public class ApiError {
 
-    @NonNull
-    private ErrorCode code;
-    private String message;
+    ErrorCode code;
+    String message;
 }

@@ -3,7 +3,6 @@ package com.wfl.infrastructure.security;
 import com.wfl.infrastructure.properties.CorsProperties;
 import com.wfl.infrastructure.properties.SettingsProperties;
 import com.wfl.infrastructure.security.filters.JwtAuthenticationFilter;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -15,10 +14,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private SettingsProperties settingsProperties;
-    @Autowired
-    private CorsProperties corsProperties;
+    private final SettingsProperties settingsProperties;
+    private final CorsProperties corsProperties;
+
+    public WebSecurityConfig(
+        SettingsProperties settingsProperties, CorsProperties corsProperties) {
+        this.settingsProperties = settingsProperties;
+        this.corsProperties = corsProperties;
+    }
 
 
     @Override

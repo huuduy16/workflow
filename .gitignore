@@ -10,5 +10,6 @@
 .idea
 *.iml
 *.class
+*.log
 out
 target

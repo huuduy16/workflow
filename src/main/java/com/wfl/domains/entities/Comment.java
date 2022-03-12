@@ -10,8 +10,8 @@ import javax.validation.constraints.NotBlank;
 import lombok.Data;
 
 @Data
-@Entity(name = "t_category")
-public class Category {
+@Entity(name = "t_comment")
+public class Comment extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,12 +25,11 @@ public class Category {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @NotBlank(message = "name cannot blank")
-    @Column(name = "name")
-    private String name;
+    @NotBlank(message = "comment cannot blank")
+    @Column(name = "description")
+    private String description;
 
-    @NotBlank(message = "category must be in a project")
-    @Column(name = "project_id")
-    private Long projectId;
-
+    @NotBlank(message = "comment must be in a task")
+    @Column(name = "task_id")
+    private Long taskId;
 }

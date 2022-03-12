@@ -7,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "settings")
 public class SettingsProperties {
 
-    private Integer batchSize;
     private String timeZone;
     private Domain domain;
 
